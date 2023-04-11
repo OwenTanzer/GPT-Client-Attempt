@@ -1,8 +1,9 @@
 import { ChatGPTAPI } from 'chatgpt'
+const configfile = require("./config.json")
 
 async function example() {
     const api = new ChatGPTAPI({
-        apikey: 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
+        apikey: configfile.TOKEN
     })
 
     const res = await api.sendMessage('Hellow world!')
